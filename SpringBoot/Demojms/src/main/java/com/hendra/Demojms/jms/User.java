@@ -6,24 +6,30 @@ public class User
     private Double rating;
     private boolean active;
 
-    public User() {
+    public User()
+    {
+        //Do Nothing
     }
 
-    public User(String email, Double rating, boolean active) {
+    public User(String email, Double rating, boolean active)
+    {
         this.email = email;
         this.rating = rating;
         this.active = active;
     }
 
-    public String getEmail() {
+    public String getEmail()
+    {
         return email;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(String email)
+    {
         this.email = email;
     }
 
-    public Double getRating() {
+    public Double getRating()
+    {
         return rating;
     }
 
@@ -40,7 +46,8 @@ public class User
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "User{" +
                 "email='" + email + '\'' +
                 ", rating=" + rating +

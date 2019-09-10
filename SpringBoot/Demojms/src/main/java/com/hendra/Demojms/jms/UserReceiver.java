@@ -20,7 +20,8 @@ public class UserReceiver
 
 
     @JmsListener(destination = "userQueue", containerFactory = "connectionFactory")
-    public void receiveMessage(User receivedUser, Message message) {
+    public void receiveMessage(User receivedUser, Message message)
+    {
         logger.info(" >> Original received message: " + message);
         logger.info(" >> Received user: " + receivedUser);
         confirmationSender.sendMessage(new Confirmation(id.incrementAndGet(), "User "

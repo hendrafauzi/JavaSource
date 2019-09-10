@@ -11,7 +11,8 @@ public class ConfirmationReceiver {
     private Logger logger = LoggerFactory.getLogger(ConfirmationReceiver.class);
 
     @JmsListener(destination = "confirmationQueue", containerFactory = "connectionFactory")
-    public void receiveConfirmation(Confirmation confirmation) {
+    public void receiveConfirmation(Confirmation confirmation)
+    {
         logger.info(" >>  Received confirmation: " + confirmation);
 
     }

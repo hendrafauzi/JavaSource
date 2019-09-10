@@ -10,7 +10,8 @@ public class ConfirmationSender
     @Autowired
     JmsTemplate jmsTemplate;
 
-    public void sendMessage(final Confirmation confirmation) {
+    public void sendMessage(final Confirmation confirmation)
+    {
         jmsTemplate.convertAndSend("confirmationQueue", confirmation);
     }
 }
